@@ -12,7 +12,8 @@
             $this->dbpwd = "";
             $this->dbname = "3dm";
 
-            $conn = new mysqli();
+            $conn = new mysqli($this->dbhost, $this->dbuser, $this->dbpwd, $this->dbname);
+            return $conn;
         }
     }
 
