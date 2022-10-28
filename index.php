@@ -1,8 +1,3 @@
-<?php
- $sql = "Selec"
- 
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +9,6 @@
 </head>
 <body>
 
-    <section>
     <form action="includes/signup.inc.php" method="post">
         <input type="text" name="uid" placeholder="Username">
         <input type="password" name="pwd" placeholder="Password">
@@ -22,8 +16,8 @@
         <input type="email" name="email" placeholder="Email">
         <button class="button-67" role="button" type="submit" name="submit">Cadastro</button>
     </form>    
-    </section>
-   
+<br>
+
     <section>
     <form action="includes/login.inc.php" method="post">
         <input type="text" name="uid" placeholder="username">
@@ -31,5 +25,9 @@
         <button type="submit" name="submit">Login</button>
     </form>
     </section>
+
+
+
+
 </body>
 </html>

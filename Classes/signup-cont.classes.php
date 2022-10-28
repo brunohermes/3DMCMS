@@ -1,20 +1,48 @@
 <?php
 
-class SignupController{
+class SignupController extends Signup{
     private $uid;
     private $pwd;
     private $pwdRepeat;
     private $email;
 
     public function __construct($uid, $pwd, $pwdRepeat, $email){
-        $this->$uid = $uid;
-        $this->$pwd = $pwd;
-        $this->$pwdRepeat = $pwdRepeat;
-        $this->$emailadress = $email;
+        $this->uid = $uid;
+        $this->pwd = $pwd;
+        $this->pwdRepeat = $pwdRepeat;
+        $this->email = $email;
     }
+
+    public function signupUser(){
+        
+        if($this->emptyInput() == false){
+            header("location: ../index.php?error=emptyinput"); 
+            exit();
+        }
+        if($this->invalidUid() == false){
+            header("location: ../index.php?error=username"); 
+            exit();
+        }
+       if($this->invalidEmail() == false){
+            header("location: ../index.php?error=email"); 
+            exit();
+        }
+        if($this->pwdMatch() == false){
+            header("location: ../index.php?error=pwdnotmatch"); 
+            exit();
+        }
+        if($this->uidTaken() == false){
+            header("location: ../index.php?error=usertaken"); 
+            exit();
+        }
+
+        $this->setUser($this->uid, $this->pwd, $this->email);
+    
+    }
+
     private function emptyInput(){
         $result;
-        if(empty($this->$uid) || empty($this->$pwd) || empty($this->$pwdRepeat) || empty($this->$email) ){
+        if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email) ){
             $result = false;
         }
         else{
@@ -50,5 +78,15 @@ class SignupController{
         }
         return $result;
     }
+   private function uidTaken(){
+        $result;
+        if(!$this->checkUser($this->uid, $this->email)){
+            $result = false;
+        }else{
+            $result = true;
+        }
+        return $result;
+    }
 
 }
+?>
