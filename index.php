@@ -13,10 +13,14 @@
     <title>Test</title>
 </head>
 <body>
-    
+
     <section>
     <form action="includes/signup.inc.php" method="post">
-        <button type="submit" name="submit">Cadastro</button>
+        <input type="text" name="uid" placeholder="Username">
+        <input type="password" name="pwd" placeholder="Password">
+        <input type="password" name="pwdRepeat" placeholder="Repeat Password">
+        <input type="email" name="email" placeholder="Email">
+        <button class="button-67" role="button" type="submit" name="submit">Cadastro</button>
     </form>    
     </section>
    
