@@ -46,7 +46,7 @@ button{
     margin-left: 45px;
     outline:none;
 }
-.logininput{    
+.logininput{
     background: url(resources/user.png) no-repeat rgba(211, 179, 179, 0.01);
     background-position-x: 1em;
     background-position-y: center;
@@ -58,16 +58,20 @@ button{
     border: 1px solid rgba(211, 179, 179, 0.01);
     color: #FFF;
     padding: 1.3em;
-    padding-left: 1rem;
-    padding-right: 3rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     border-radius: 8px;
     caret-color: #046afb; 
+    transition: 0.2s ease;
 }
 .logininput:focus{  
     outline: 1px solid #046afb;
-    opacity: 0.9;
+    background-position-x: 90%;
+    transition: 0.25s ease;
+}
+.logininput:focus::placeholder{
+    opacity: 0;
+    transition: 0.25s ease;
 }
 
 .pwdinput{
@@ -82,16 +86,20 @@ button{
     border: 1px solid rgba(211, 179, 179, 0.01);
     color: #FFF;
     padding: 1.3em;
-    padding-left: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    padding-left: 20%;
     border-radius: 8px;
     caret-color: #046afb; 
+    transition: 0.25s ease;
 }
 .pwdinput:focus{
     outline: 1px solid #046afb;
-    opacity: 0.9;
+    background-position-x: 90%;
+    transition: 0.25s ease;
+}
+.pwdinput:focus::placeholder{
+    opacity: 0;
+    transition: 0.25s ease;
 }
 
 
@@ -99,16 +107,14 @@ button{
     margin-left: -5em;
     margin-top: 1rem;
     display:block;
-    padding: 3em;
+    padding: 5em;
     padding-bottom: 2em;
-    /* background:#1b1e28; */
-/* From https://css.glass */
-background: rgba(217, 217, 217, 0.03);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10.8px);
--webkit-backdrop-filter: blur(10.8px);
-border: 1px solid rgba(217, 217, 217, 0.01);
+    background: rgba(217, 217, 217, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    border: 1px solid rgba(217, 217, 217, 0.01);
 }
 .login-button{
     margin-top: 5px;
@@ -124,6 +130,7 @@ border: 1px solid rgba(217, 217, 217, 0.01);
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
 ::placeholder{
+    padding-left: 15%;
     opacity: 0.6;
     font-family: 'Dongle', sans-serif;
     font-weight: 100;
