@@ -12,8 +12,12 @@
 body,
 html {
     margin:0;
-    background: #14181e;
+    /* background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%); */
     height: 100%;
+    background: #536976;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 button{
     border:none;
@@ -23,7 +27,7 @@ button{
     align-items: center;
     justify-content: center;
     height: 75%;
-    background: #14181e;
+    /* background: #14181e; */
 }
 .header-register{
     display: flex;
@@ -104,10 +108,10 @@ button{
 
 
 .loginform{
-    margin-left: -5em;
+    margin-left: -3em;
     margin-top: 1rem;
-    display:block;
-    padding: 5em;
+    padding: 6em;
+    padding-top: 2em;
     padding-bottom: 2em;
     background: rgba(217, 217, 217, 0.03);
     border-radius: 16px;
@@ -116,6 +120,8 @@ button{
     -webkit-backdrop-filter: blur(10.8px);
     border: 1px solid rgba(217, 217, 217, 0.01);
 }
+
+
 .login-button{
     margin-top: 5px;
     font-family: 'Dongle', sans-serif;
@@ -127,7 +133,8 @@ button{
 }
 .login-button:hover{
     background-color: #0d71ff;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;  
+    transition: 0.25s ease;
 }
 ::placeholder{
     padding-left: 15%;
@@ -178,6 +185,19 @@ button{
     width: 1.5em;
     height: 1.5em;
 }
-.social-icons{
-   
+.footer{
+    padding: 2em;
+    display: flex;
+}
+.footerlink{
+    margin-left: 1em;
+    
+} 
+.footerhr{
+    opacity: 0.3;
+    height: 0;
+    border: 1px solid white;
+    border-radius: 1px;
+    width: 80%;
+
 }
