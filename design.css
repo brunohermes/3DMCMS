@@ -1,20 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Pontano+Sans&family=Sacramento&display=swap');
 *{
     font-family: 'Montserrat', sans-serif;
     color: #fff;
-    background: #14181e;
-    outline:none;
-    margin: 0;
+    outline: none;
 }
-
-
-
+body,
+html {
+    margin:0;
+    background: #14181e;
+    height: 100%;
+}
+button{
+    border:none;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75%;
+    background: #14181e;
+}
+.header-register{
+    display: flex;
+    height: 15%;
+    align-items: right;
+    justify-content: right;
+}
 .signupbt{
     z-index: 10;
     font-family: 'Montserrat', sans-serif;
     margin: 50px;
-    float: right;
     color: #fff;
     font-size: 13pt;
     background-color: #0bbe35;
@@ -25,61 +45,132 @@
     padding-right: 35px;
     margin-left: 45px;
     outline:none;
-    
+}
+.logininput{    
+    background: url(resources/user.png) no-repeat rgba(211, 179, 179, 0.01);
+    background-position-x: 1em;
+    background-position-y: center;
+    background-size: 1.3em 1.3em;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.8px);
+    -webkit-backdrop-filter: blur(0.8px);
+    border: 1px solid rgba(211, 179, 179, 0.01);
+    color: #FFF;
+    padding: 1.3em;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    caret-color: #046afb; 
+}
+.logininput:focus{  
+    outline: 1px solid #046afb;
+    opacity: 0.9;
+}
 
+.pwdinput{
+    background: url(resources/lock.png) no-repeat rgba(211, 179, 179, 0.01);
+    background-position-x: 1em;
+    background-position-y: center;
+    background-size: 1.5em 1.5em;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.8px);
+    -webkit-backdrop-filter: blur(0.8px);
+    border: 1px solid rgba(211, 179, 179, 0.01);
+    color: #FFF;
+    padding: 1.3em;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 20%;
+    border-radius: 8px;
+    caret-color: #046afb; 
 }
-.signupbt:hover{
+.pwdinput:focus{
+    outline: 1px solid #046afb;
+    opacity: 0.9;
+}
 
-}
-.logininput{
-    background: #fff;
-    color: #000;
-    padding: 15px;
-    padding-left: 15px;
-    padding-right: 75px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    border: 2px solid #272a32;
-    border-radius: 3.5px;
-}
-.input{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-}
 
-.formpos{ 
-    margin-top:0;
-    position: fixed;
-    height: 100%;
-    width: fit-content; 
-    width: 30%;
-    background-color: #1b1e28;
-    border-right: 2px solid #272a32;
-    
-}
- 
 .loginform{
-    margin-top: 50%;
-    margin-left: 10%;
-    height: fit-content;
-    width: fit-content;
+    margin-left: -5em;
+    margin-top: 1rem;
     display:block;
-    padding: 100px;
-    background:#1b1e28;
-    
+    padding: 3em;
+    padding-bottom: 2em;
+    /* background:#1b1e28; */
+/* From https://css.glass */
+background: rgba(217, 217, 217, 0.03);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.8px);
+-webkit-backdrop-filter: blur(10.8px);
+border: 1px solid rgba(217, 217, 217, 0.01);
 }
 .login-button{
-    font-family: 'Montserrat', sans-serif;
-    margin: 50px;
-    float: right;
-    color: #fff;
-    font-size: 13pt;
-    background-color: #0bbe35;
-    border: 2px solid #0bbe35;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    padding-left: 10px;
+    margin-top: 5px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 20pt;
+    padding: 0.3rem;
+    background-color: #046afb;
+    border-radius: 9px;
+    width: 100%;
 }
 .login-button:hover{
-    box-shadow: rgba(64, 185, 87, 0.4) 0px 5px, rgba(64, 185, 87, 0.3) 0px 10px, rgba(64, 185, 87, 0.2) 0px 15px, rgba(64, 185, 87, 0.1) 0px 20px, rgba(64, 185, 87, 0.05) 0px 25px;
+    background-color: #0d71ff;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+}
+::placeholder{
+    opacity: 0.6;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    letter-spacing: 0.2pt;
+    font-size: 17pt;
+
+}
+.loginw{
+    margin-top: 5em;
+    display: flex;
+    font-size: 6pt;
+    opacity: 0.7;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.hr1{
+    display: flex;
+    float: left;
+    color: #fff;
+    opacity: 0.2;
+    width: 7em;
+    border: 0.01px solid white;
+    border-radius: 1px;
+}
+.hr2{
+    display: flex;
+    float: right;
+    color: #fff;
+    opacity: 0.2;
+    width: 7em;
+    border: 0.01px solid white;
+    border-radius: 1px;
+}
+.social{
+    margin-top: 1em;
+    margin-left: 0.7em;   
+    background: rgba(217, 217, 217, 0.03);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.8px);
+    -webkit-backdrop-filter: blur(10.8px);
+    border: 7px solid rgba(217, 217, 217, 0.01);
+    width: 1.5em;
+    height: 1.5em;
+}
+.social-icons{
+   
 }
